@@ -13,17 +13,17 @@
        var t = $('#chart').DataTable();
        $.ajax({
             type: "GET",
-            url: "empdata.xml", 
+            url: "streamerdata.xml", 
             dataType: "xml",
             success: function(xml) {  
              $(xml).find('data').each(function(){  
               t.row.add( [
-                $(this).find('name').text(),
-                $(this).find('designation').text(),
-                $(this).find('office').text(),
-                $(this).find('extension').text(),
-                $(this).find('joining_date').text(),
-                $(this).find('salary').text()
+                $(this).find('streamername').text(),
+                $(this).find('twitchid').text(),
+                $(this).find('favgenre').text(),
+                $(this).find('favgame').text(),
+                $(this).find('yearlytips').text(),
+                $(this).find('favplatform').text()
               ] ).draw( false );
              });
             }
@@ -36,23 +36,23 @@
   <table id="chart" class="display" cellspacing="0" width="100%">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Designation</th>
-            <th>Office</th>
-            <th>Extension</th>
-            <th>Joining Date</th>
-            <th>Salary</th>
+            <th>Streamer Name</th>
+            <th>Twitch ID</th>
+            <th>Favorite Genre</th>
+            <th>Favorite Game</th>
+            <th>Annual Tips</th>
+            <th>Preferred Platform</th>
         </tr>
     </thead>
 
     <tfoot>
         <tr>
-            <th>Name</th>
-            <th>Designation</th>
-            <th>Office</th>
-            <th>Extension</th>
-            <th>Joining Date</th>
-            <th>Salary</th>
+            <th>Streamer Name</th>
+            <th>Twitch ID</th>
+            <th>Favorite Genre</th>
+            <th>Favorite Game</th>
+            <th>Annual Tips</th>
+            <th>Preferred Platform</th>
         </tr>
     </tfoot>
   </table>
