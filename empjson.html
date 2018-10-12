@@ -10,22 +10,22 @@
     <table id="empTable" class="display" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Office</th>
-                <th>Extension</th>
-                <th>Joining Date</th>
-                <th>Salary</th>
+                <th>Streamer Name</th>
+                <th>Twitch ID</th>
+                <th>Favorite Genre</th>
+                <th>Favorite Game</th>
+                <th>Annual Tips</th>
+                <th>Preferred Platform</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Office</th>
-                <th>Extension</th>
-                <th>Joining Date</th>
-                <th>Salary</th>
+                <th>Streamer Name</th>
+                <th>Twitch ID</th>
+                <th>Favorite Genre</th>
+                <th>Favorite Game</th>
+                <th>Annual Tips</th>
+                <th>Preferred Platform</th>
             </tr>
         </tfoot>
     </table>
@@ -38,14 +38,14 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $('#empTable').dataTable({
-            "ajax": "empdata.js",
+            "ajax": "streamerdata.js",
             "columns": [
-                {"data": "name"},
-                {"data": "designation"},
-                {"data": "office"},
-                {"data": "extension"},
-                {"data": "joining_date"},
-                {"data": "salary"}
+                {"data": "Streamer_ID"},
+                {"data": "Twitch_ID"},
+                {"data": "Favorite_Genre"},
+                {"data": "Favorite_Game"},
+                {"data": "Annual_Tips"},
+                {"data": "Preferred_Platform"}
             ]
         });   
     });
